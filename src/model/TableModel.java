@@ -59,12 +59,16 @@ public class TableModel extends AbstractTableModel {
 
     @Override
     public boolean isCellEditable(int rowIndex, int columnIndex) {
-        return columnIndex == 2;
+
+        return columnIndex == 0 || columnIndex == 2;
     }
 
     @Override
     public void setValueAt(Object aValue, int rowIndex, int columnIndex) {
         ToDoItem item = items.get(rowIndex);
+        if (columnIndex == 0){
+            item.setContent((String) aValue);
+        }
         if (columnIndex == 2){
             item.setDone((boolean)aValue);
         }

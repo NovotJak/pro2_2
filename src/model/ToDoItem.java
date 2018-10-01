@@ -1,5 +1,6 @@
 package model;
 
+import java.awt.*;
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -30,5 +31,9 @@ public class ToDoItem implements Serializable {
 
     public void setDone(boolean done){
         this.done = done;
+    }
+
+    public String setContent(String aValue) {
+        return content;
     }
 }
