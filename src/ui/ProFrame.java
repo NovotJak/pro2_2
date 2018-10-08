@@ -40,6 +40,12 @@ public class ProFrame extends JFrame{
             save.setText("Uložit");
             toolbar.add(save);
 
+
+
+            button.addActionListener(action -> {
+                ToDoItem item= new ProDialog().getItem();
+            });
+
            save.addActionListener(action -> {
                 saveItems();
             });
